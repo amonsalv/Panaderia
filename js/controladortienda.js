@@ -13,7 +13,8 @@ contenedorTienda.addEventListener("click",function(evento){
 
     if(evento.target.classList.contains("btn")){
         let modalinfo = new bootstrap.Modal(document.getElementById('modalinfor'))
-        ampliarInformacionProducto(evento)
+        producto=ampliarInformacionProducto(evento)
+        console.log(producto)
         modalinfo.show()
     }
 })
