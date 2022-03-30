@@ -23,4 +23,9 @@ contenedorTienda.addEventListener("click",function(evento){
 let carrito=[]
 
 let botonAgregarCarrito=document.getElementById("botonadd")
-botonAgregarCarrito.addEventListener("click",function(){})
+botonAgregarCarrito.addEventListener("click",function(){
+
+    carrito.push(producto)
+    console.log(carrito)
+    
+})
