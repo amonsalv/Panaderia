@@ -1,90 +1,25 @@
-// Entradas del problema (comentario de linea)
+import {llenarTienda} from './llenadotienda.js'
+import {ampliarInformacionProducto} from './amplianinfo.js'
 
-/* 
-esto es
-un comentario
-de bloque
-*/
+//creo un producto vacio en el controlador 
+let producto={}
 
-// ENTRADAS==VARIABLES==CONSTANTES
+//llamando a tienda llenado
+llenarTienda()
 
-/*let nameproduct = "a"
-let priceproduct = 5000
-let pesoproduct = 0000
-let haddiscount = true
-let descriptionproduct= "lorem"
-let phoneseller = "30000000"
+// rutina para ampliar informacion
+let contenedorTienda=document.getElementById("filas")
+contenedorTienda.addEventListener("click",function(evento){
 
-const NAME_CLIENT = "ana"
+    if(evento.target.classList.contains("btn")){
+        let modalinfo = new bootstrap.Modal(document.getElementById('modalinfor'))
+        ampliarInformacionProducto(evento)
+        modalinfo.show()
+    }
+})
 
-//Arreglos unidimencionales(vectores)
-//sirven para almacenar varios elementos en 1 sola variable
-let products=["a","b","c","d"]
-let products2=Array("a","b","c","d")
+//rutina par ael anadir a la cesta 
+let carrito=[]
 
-//SALIDAS 
-
-console.log("buenas")
-console.log(nameproduct)
-console.log("su nombre es: "+NAME_CLIENT+"y su producto es: "+nameproduct)
-console.log(`su nombre es: ${NAME_CLIENT} y su producto es: ${nameproduct}`)
-console.log("*****")
-console.log(products)
-console.log(products2[0])*/
-
-/*controlando etiquetas 
-
-///1er paso crear una variable para guardar una etiqueta: para js una etiqueta es una referencia de memoria  
-let etiquetatitulo = document.getElementById("titulo")
-console.log(etiquetatitulo)
-
-//2. como modificar el texto de una etiqueta
-etiquetatitulo.textContent="lorem"
-
-
-//controlando el menu
-let etiquetanav = document.getElementById("titulonav")
-                                                        
-etiquetanav.textContent="Repostreria"
-
-console.log(etiquetanav)
-
-//controlando una foto
-let etiquetafoto=document.getElementById("fotocinamon")
-etiquetafoto.src="img/cinnamon-rolls.jpg"
-
-//cambiar estilo de la etiqueta
-etiquetatitulo.classList.add("text center")
-*/
-
-//Tienda se crean muchas variables y no es muy util, gasta mucha memoria se hace arreglo de cjas
-/*let nombreProducto = "rollo de canela"
-let precioProducto = 25000
-let descripcionProducto = "lorem"
-
-let nombreProducto2 = "pastel de arequipe"
-let precioProducto2 = 2500
-let descripcionProducto2 = "lorem"
-*/
-
-//Tienda
-let productosNombre = ["Rollos de canela","Pastel de arequipe","Torta de banano"]
-let productosPrecio =[15000,2500,25000]
-let productosPromocion = [true,false]
-
-console.log(productosNombre[1])
-
-//creando objetos con js 
-let usuario = {
-
-    //atributo : valor
-    nombre :"Bruno diaz",
-    edad : 24,
-    amigos : ["ron","marta","luis"]
-
-}
-
-console.log(usuario)
-console.log(usuario.nombre)
-console.log(usuario.amigos)
-console.log(usuario.amigos[1])
+let botonAgregarCarrito=document.getElementById("botonadd")
+botonAgregarCarrito.addEventListener("click",function(){})

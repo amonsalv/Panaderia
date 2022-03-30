@@ -1,4 +1,6 @@
-//creando una arreglo de objetos
+
+export function llenarTienda(){
+    //creando una arreglo de objetos
 let productosBD = [
 
     {foto: 'img/cinnamon-rolls.jpg', nombre : "rollos de canela",precio:20000,descripcion:"Deliciosos rollos de canela"},
@@ -49,44 +51,28 @@ productosBD.forEach(function(producto){
     precio.classList.add("text-center")
     precio.textContent=producto.precio
 
+    //comprar 
+
+    let comprar=document.createElement("button")
+    comprar.setAttribute("type","button")
+    comprar.classList.add("btn","btn-warning","mx-4","mb-4")
+    comprar.textContent="comprar"
+
+
     //3. padres e hijos
     tarjeta.appendChild(foto)
     tarjeta.appendChild(titulo)
+    tarjeta.appendChild(precio)
+    tarjeta.appendChild(comprar)
+
     columna.appendChild(tarjeta)
-    fila.appendChild(columna)
+    filas.appendChild(columna)
     
 })
 
-let contenedorTienda=document.getElementById("filas")
-contenedorTienda.addEventListener("click",function(evento){
-     
-     if(evento.target.classList.contains("btn")){
 
-          console.log(evento.target.parentElement.querySelector("h4"))
+}
 
-
-          let modalinfo = new bootstrap.Modal(document.getElementById('modalinfor'))
-          let nombre = evento.target.parentElement.querySelector("h4").textContent
-
-          let fotoinfo=document.getElementById("fotoinfo")
-          fotoinfo.src= evento.target.parentElement.querySelector("img").src
-
-          let titulofoto=document.getElementById("nombreinfo")
-          titulofoto.textContent=evento.target.parentElement.querySelector("h4").textContent
-          titulofoto.classList.add("text-dark")
-
-          let descripcioncinfo=document.getElementById("descripcioninfo")
-          descripcioncinfo.textContent=evento.target.parentElement.querySelector("p").textContent
-          descripcioncinfo.classList.add("text-dark")
-
-          let precioinfo=document.getElementById("precioinfo")
-          precioinfo.textContent=evento.target.parentElement.querySelector("h5").textContent
-          precioinfo.classList.add("text-warning")
-
-          modalinfo.show()
-          
-     }
-})
 
 
 
