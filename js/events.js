@@ -1,4 +1,4 @@
-let etiquetaBoton = document.getElementById("boton")
+/*let etiquetaBoton = document.getElementById("boton")
 
 etiquetaBoton.addEventListener("click", cambiarFoto)
 
@@ -14,4 +14,4 @@ etiquetaImagen.addEventListener("mouseover",cambiarTexto)
 function cambiarTexto (){
     let titulo2 = document.getElementById("Titulorepostreria")
     titulo2.textContent= "pasteles"
-}
+}*/
