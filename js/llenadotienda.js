@@ -35,6 +35,7 @@ productosBD.forEach(function(producto){
     let tarjeta=document.createElement("div")
     tarjeta.classList.add("card")
     tarjeta.classList.add("h-100")
+    tarjeta.classList.add("my-10px")
 
     //img con la clase card-img-top
     let foto=document.createElement("img")

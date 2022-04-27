@@ -1,6 +1,9 @@
 import {getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js"
 
 let boton=document.getElementById("botonregistro")
+let modalregistro=new bootstrap.Modal(document.getElementById("mensajeinformativo"))
+let textoModal=document.getElementById("mensajemodalinfo")
+
 
 boton.addEventListener("click",function(evento){
     evento.preventDefault()
@@ -15,6 +18,13 @@ boton.addEventListener("click",function(evento){
         // Signed in
         const user = userCredential.user;
         console.log("Exito en el registro")
+        textoModal.textContent="Exito en el registro"
+        modalregistro.show()
+        let formulario=document.getElementById("formularioregistro")
+        formulario.reset() 
+        setTimeout(function(){
+            modalregistro.hide()
+        },2000)
         // ...
     })
     .catch((error) => {
@@ -22,6 +32,11 @@ boton.addEventListener("click",function(evento){
         const errorMessage = error.message;
         // ..
         console.log("Fallo "+errorMessage)
+        textoModal.textContent="Fallamos: "+errorMessage
+        modalregistro.show()
+        setTimeout(function(){
+            modalregistro.hide()
+        },2000)
     });
 
 

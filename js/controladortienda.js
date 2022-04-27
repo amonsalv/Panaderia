@@ -84,8 +84,13 @@ botonVerCarrito.addEventListener("click",function(){
         foto.classList.add("w-100","img-fluid")
         foto.src=producto.foto
 
+        let nombre1=document.createElement("h4")
+        nombre1.classList.add("text-warning")
+        nombre1.textContent=producto.nombre
+
         //PADRES E HIJOS
         columna1.appendChild(foto)
+        columna2.appendChild(nombre1)
         fila.appendChild(columna1)
         fila.appendChild(columna2)
         base.appendChild(fila)
@@ -94,6 +99,28 @@ botonVerCarrito.addEventListener("click",function(){
 
     modalcompra.show()
 
-
-
 })
+
+/*
+let subtotal=document.getElementById("subtotal")
+function subtotal (validar) {
+    let total=0
+
+    carrito.forEach(function(producto){
+        console.log(producto.precio)
+        let prueba=(producto.precio.split("$")[1])
+        let prueba2=(prueba.split("")[0])
+        console.log(prueba2)
+        console.log(Number(prueba2))
+
+    if(validar==1){
+        total=total+(Number(producto.cantidad) * Number(prueba2))
+        subtotal.textContent=total
+    }
+    else{
+        total=0
+        subtotal.textContent=""
+    }
+    })
+
+} */

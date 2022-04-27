@@ -17,7 +17,7 @@
 <body>
     <header>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light animate__animated animate__fadeInDown">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light animate__animated animate__fadeInDown fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
                     <img src="img/bread.png" alt="logo" class="img-fluid" width="30" height="24">
@@ -55,20 +55,15 @@
                 </div>
             </div>
         </nav>
-
     </header>
 
     <main>
-
 
         <section class="animate__animated animate__fadeIn">
             <img src="img/bakery.jpg" alt="fotobanner"
                 class="animate__animated animate__fadeInDown img-fluid w-100 mb-8 ">
         </section>
 
-        <section class="animate__animated animate__fadeIn">
-            <img src="img/fotobatman.jpg" alt="imagen" class="w-100 img-fluid">
-        </section>
 
         <div class="wow container mt-5 animate__animated animate__fadeInUp">
             <div class="row d-flex justify-content-center">
@@ -80,11 +75,11 @@
                     <p>
                         Todos los dias obtendras distintos beneficios para comprar en nuestra repostreria solo por estar
                         inscrito.
-                        Registrate para obtenerlos!
+                        Inicia sesión para obtenerlos!
                     </p>
                     <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                        Registrate
+                        Inicia
                         <i class="fas fa-sign-in-alt"></i>
                     </button>
                 </div>
@@ -95,7 +90,8 @@
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample"
                 aria-labelledby="offcanvasExampleLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Registro</h5>
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Ingresar
+                    </h5>
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>
@@ -103,28 +99,25 @@
 
                     <div class="row justify-content-center my-5">
                         <div class="col-5">
-        
-                            <form>
-        
+
+                            <form id="formularioregistro">
+
                                 <div class="mb-3">
                                     <label class="form-label">Email:</label>
                                     <input type="email" class="form-control" id="email">
                                 </div>
-        
+
                                 <div class="mb-3">
                                     <label class="form-label">Contraseña:</label>
                                     <input type="password" class="form-control" id="password">
                                 </div>
-        
+
                                 <button type="submit" class="btn btn-primary w-100" id="botonregistro">Registro</button>
-        
+
                             </form>
-        
                         </div>
                     </div>
-        
                 </section>
-        
         </section>
 
         <section>
@@ -225,6 +218,23 @@
 
     </main>
 
+    <section>
+        <!-- Modal -->
+        <div class="modal fade" id="mensajeinformativo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p id="mensajemodalinfo"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     <footer>
         <div class="row mt-5 w-5 " id="rowfooter">
 
@@ -255,6 +265,7 @@
     <script src="js/events.js"></script>
     <script src="js/firebase.js" type="module"></script>
     <script src="js/registro.js" type="module"></script>
+    <script src="wow.min.js"></script>
     <script>
         new WOW().init();
     </script>

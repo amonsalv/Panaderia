@@ -9,15 +9,18 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="/estilos.css">
+  <link rel="stylesheet" href="estilos.css">
   <title>Tienda</title>
 </head>
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light animate__animated animate__backInDown">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light animate__animated animate__fadeInDown fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="Index.html" id="titulonav">Respostreria</a>
+        <a class="navbar-brand" href="index.html">
+          <img src="img/bread.png" alt="logo" class="img-fluid" width="30" height="24">
+        </a>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -25,43 +28,52 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              <a class="nav-link active" aria-current="page" href="index.html">Repostreria</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="store.html">Tienda</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="store.html" id="vercarrito">
-                <i class="bi bi-basket3"></i>
-                <span id="capsula"
-                  class="position-absolute top-10 start-10 translate-middle badge rounded-pill bg-danger invisible">
-                  99+
-                </span>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Descubre más
               </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="store.html">Tienda</a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" id="vercarrito">
+                    <i class="bi bi-basket3"></i>
+                    <span id="capsula"
+                      class="position-absolute top-10 start-10 translate-middle badge rounded-pill bg-danger invisible">
+                      99+
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" id="dropdown">
+                </li>
+                <li><a class="dropdown-item" href="store.html">Tienda online</a></li>
+              </ul>
             </li>
           </ul>
           <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
           </form>
         </div>
       </div>
     </nav>
 
+
   </header>
+
   <main>
     <div class="container">
       <div class="row row-cols-1 row-cols-md-5 g-4" id="filas">
-
       </div>
     </div>
-
-
   </main>
 
   <section>
     <!-- Modal -->
-    <div class="modal fade" id="modalinfor">
+    <div class="modal fade margin-top: 25" id="modalinformacion">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -72,6 +84,7 @@
 
             <div class="container">
               <div class="row">
+
                 <div class="col-4">
                   <img src="" alt="" class="w-100 img-fluid" id="fotoinfo">
                 </div>
@@ -80,14 +93,16 @@
                   <h5 id="precioinfo"></h5>
                   <p id="descripcioninfo"></p>
                   <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Cantidad</label>
-                    <input type="number" class="form-control" id="cantidadProducto">
+
+                    <div class="mb-3">
+                      <label class="form-label">Cantidad:</label>
+                      <input type="number" class="form-control" id="cantidadProducto" min="1" value="1">
+                    </div>
 
                   </div>
                 </div>
               </div>
             </div>
-
           </div>
 
           <div class="modal-footer">
@@ -101,8 +116,6 @@
   </section>
 
   <section>
-
-
     <!-- Modal -->
     <div class="modal fade" id="resumencompra" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -131,7 +144,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
-
 
   <script src="js/controladortienda.js" type="module"></script>
 
