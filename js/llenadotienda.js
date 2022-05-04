@@ -12,6 +12,7 @@ let productosBD = [
     {foto: 'img/manzana1.jpg', nombre : "Pie de manzana", precio:28000,descripcion: " lorem "},
     {foto: 'img/tresleches1.jpg', nombre : "Torta de 3 leches", precio:32000,descripcion: " lorem "},
     {foto: 'img/galletasmantequilla1.jpg', nombre : "Galletas de mantequilla", precio:5000,descripcion: " lorem "},
+    {foto: 'img/profiteroles.jpg', nombre : "Profiteroles", precio:5000,descripcion: " lorem "},
 
 ]
 
@@ -56,7 +57,7 @@ productosBD.forEach(function(producto){
 
     let comprar=document.createElement("button")
     comprar.setAttribute("type","button")
-    comprar.classList.add("btn","btn-warning","mx-4","mb-4")
+    comprar.classList.add("btn","btn-success","mx-4","mb-4")
     comprar.textContent="comprar"
 
 

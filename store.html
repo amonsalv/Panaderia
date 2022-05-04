@@ -96,7 +96,8 @@
 
                     <div class="mb-3">
                       <label class="form-label">Cantidad:</label>
-                      <input type="number" class="form-control" id="cantidadProducto" min="1" value="1">
+                      <input type="number" class="form-control" id="cantidadProducto" min="1" max="10" value="1"
+                      aria-valuenow="1">
                     </div>
 
                   </div>
@@ -105,8 +106,7 @@
             </div>
           </div>
 
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="limpiar">Limpiar</button>
+          <div class="modal-footer"> 
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
             <button type="button" class="btn btn-primary" id="botonadd">Añadir al carrito</button>
           </div>
@@ -128,8 +128,15 @@
             <div class="container" id="basecarro">
 
             </div>
+            <p id="total"></p>
+            <button type="button" class="btn btn-success" id="usd">Precio en USD</button>
+            <button type="button" class="btn btn-warning" id="cop">Precio en COP</button>
           </div>
           <div class="modal-footer">
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="limpiar">Limpiar</button>
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
             <button type="button" class="btn btn-primary">Comprar</button>
           </div>
@@ -137,6 +144,32 @@
       </div>
     </div>
   </section>
+
+  <footer>
+
+    
+    <div class="row mt-5 w-5 " id="rowfooter" >
+      
+
+        <div class="container-fluid footer footer-container col-md-7" id="DP">
+          
+            <h5>Datos Personales</h5>
+            <p>Nombre: Ana María Monsalve Blandón </p>
+
+            <p>Correo: anamonsalve96@gmail.com </p>
+            <p>Desarrolladora web</p>
+        </div>
+
+        <div class="col-3">
+
+            <h5>Contactenos</h5>
+            <p><a href="https://www.instagram.com/_anamonsalve/" target="_blank">Instagram</a></p>
+            <p><a href="https://github.com/amonsalv" target="_blank">Github</a></p>
+            <p>Celular: +57 3154682130</p>
+        </div>
+    </div>
+
+</footer>
 
 
 
