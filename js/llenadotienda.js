@@ -22,9 +22,7 @@ let productosBD = [
 let fila=document.getElementById("fila")
   
 productosBD.forEach(function(producto){
-    console.log(producto.nombre)
-    console.log(producto.precio)
-    console.log(producto.foto)
+    
 
     //Pintando etiquetas
 

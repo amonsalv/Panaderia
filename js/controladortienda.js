@@ -37,6 +37,7 @@ botonAgregarCarrito.addEventListener("click",function(){
     producto.subtotal = cantidad * Number(precio)
     //agrego el producto al carrito
     carrito.push(producto)
+    console.log(carrito)
 
     let suma = 0
 
@@ -108,6 +109,7 @@ botonVerCarrito.addEventListener("click",function(){
         precio.textContent = "Precio UN: $" + producto.precio + "COP"
 
         let subtotal = document.createElement("p")
+        
         subtotal.classList.add("text-light")
 
         subtotal.textContent = "Subtotal : $" + producto.subtotal + " COP"
@@ -130,7 +132,7 @@ botonVerCarrito.addEventListener("click",function(){
             total.textContent = "Total : $" + totalneto + " COP"
         })
 
-        /* let cop = document.getElementById("cop")
+        let cop = document.getElementById("cop")
         cop.addEventListener("click", function () {
             let cop = totalneto
 
@@ -153,7 +155,7 @@ botonVerCarrito.addEventListener("click",function(){
             let subtusd = producto.subtotal
             subt.textContent = "Subtotal : $" + subtusd / 4000 + " USD"
 
-        })*/
+        })
 
         //PADRES E HIJOS
         columna1.appendChild(foto)

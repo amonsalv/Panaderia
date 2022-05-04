@@ -7,6 +7,7 @@ export function ampliarInformacionProducto (evento){
     //lleno la informacion del producto
     producto.foto=evento.target.parentElement.querySelector("img").src
     producto.nombre=evento.target.parentElement.querySelector("h4").textContent
+    producto.precio=evento.target.parentElement.querySelector("h2").textContent
 
     let fotoinfo=document.getElementById("fotoinfo")
     fotoinfo.src= evento.target.parentElement.querySelector("img").src
@@ -22,7 +23,7 @@ export function ampliarInformacionProducto (evento){
     descripcioncinfo.classList.add("text-dark")*/
 
     let precioinfo=document.getElementById("precioinfo")
-    console.log(evento.target.parentElement)
+    console.log(evento.target.parentElement.querySelector("h2").textContent)
     precioinfo.textContent=evento.target.parentElement.querySelector("h2").textContent
     precioinfo.classList.add("text-warning")
 
