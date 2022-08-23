@@ -17,7 +17,7 @@ export function ampliarInformacionProducto (evento){
     titulofoto.classList.add("text-dark")
 
     
-   /*this shit doesn't work 
+   /*no funciona
    let descripcioncinfo=document.getElementById("descripcioninfo")
     descripcioncinfo.textContent=evento.target.parentElement.querySelector("p").textContent
     descripcioncinfo.classList.add("text-dark")*/
